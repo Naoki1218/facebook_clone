@@ -1,3 +1,7 @@
+<div class="container">
+<header class="header">Fakebook</header>
+</div>
+
 <h1>ブログ一覧</h1>
 <p><%= notice %></p>
 <table>
@@ -10,6 +14,7 @@
   <tr>
     <td><%= blog.title %></td>
     <td><%= blog.content %></td>
+    <td>名前: <%= blog.user.name %></td>
     <td><%= image_tag(blog.image.url(:thumb)) if blog.image && blog.image.url %></td>
     <td><%= link_to '詳細を確認する', blog_path(blog.id) %></td>
     <td><%= link_to "ブログを編集する", edit_blog_path(blog.id), data: { confirm: '本当に編集していいですか？' } %></td>
